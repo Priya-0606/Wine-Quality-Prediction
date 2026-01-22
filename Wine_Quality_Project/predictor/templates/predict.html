@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">🍷 Wine Quality Prediction</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+                {% for field in form %}
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="text-danger small">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-dark px-5">Predict</button>
+            </div>
+        </form>
+
+        {% if prediction is not None %}
+<div class="alert alert-info text-center mt-4">
+    <h4>
+        Predicted Quality:
+        <span class="{% if label == 'Good' %}text-success{% else %}text-danger{% endif %}">
+            {{ label }}
+        </span>
+    </h4>
+
+    {% if label == "Good" %}
+        <p class="mb-0">
+            This wine is predicted to be of acceptable to high quality based on its chemical properties.
+        </p>
+    {% else %}
+        <p class="mb-0">
+            This wine may have quality issues such as imbalance in acidity, alcohol, or sulphates.
+        </p>
+    {% endif %}
+</div>
+{% endif %}
+
+<div class="mt-4 small text-muted">
+    <strong>Input Guidelines:</strong>
+    <ul class="mb-0">
+        <li>Alcohol: 8.0 – 15.0 (%)</li>
+        <li>pH: 2.8 – 4.0</li>
+        <li>Density: 0.990 – 1.005</li>
+        <li>Sulphates: 0.3 – 2.0</li>
+        <li>Other values should stay within realistic wine chemistry ranges</li>
+    </ul>
+</div>
+
+
+</body>
+</html>
+
+
+
