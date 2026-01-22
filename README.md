@@ -80,6 +80,5 @@ This project was created to demonstrate:
 
 <img width="1854" height="853" alt="Screenshot 2026-01-22 181553" src="https://github.com/user-attachments/assets/264e0d47-927a-4137-a5f8-8a5f4b8c0569" />
 
-<img width="1874" height="855" alt="image" src="https://github.com/user-attachments/
-  assets/cfa95714-d5c1-4d24-ad16-95a83033317e" />
+<img width="1874" height="855" alt="Screenshot 2026-01-22 181841" src="https://github.com/user-attachments/assets/b4acfbdd-ac54-4e40-b920-fef8a370be91" />
 
