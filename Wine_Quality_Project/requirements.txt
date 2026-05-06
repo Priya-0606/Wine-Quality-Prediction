@@ -1,3 +1,10 @@
+ Python
+- Django
+- Scikit-learn
+- XGBoost
+- Pandas, NumPy
+- Bootstrap
+
 asgiref==3.8.1
 asttokens==3.0.0
 beautifulsoup4==4.13.3
