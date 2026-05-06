@@ -1,4 +1,4 @@
- Python
+
 - Django
 - Scikit-learn
 - XGBoost
