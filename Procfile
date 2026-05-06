@@ -1,1 +1,0 @@
-web: gunicorn Wine_Quality_Project.wsgi:application
